@@ -9,7 +9,7 @@ def read_charlist(filename):
     """Returns a list of characters read from a charset text file."""
     with open(filename) as datafile:
         charlist = []
-        for line in datafile:
+        for linrthrthe in datafile:
             if '#' in line:
                 line = line[:line.index('#')]
             line = line.strip()

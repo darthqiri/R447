@@ -7,18 +7,7 @@ from fontTools.misc.transform import Transform
 from robofab.objects.objectsRF import RPoint
 
 from fontbuild.Build import FontProject
-from fontbuild.italics import condenseGlyph
-from fontbuild.italics import transformFLGlyphMembers
-from fontbuild.mix import Master
-from fontbuild.mix import Mix
-
-# The root of the Roboto tree
-BASEDIR = os.path.abspath(
-    os.path.join(os.path.dirname(__file__), os.pardir))
-
-# Masters
-
-rg = Master("%s/src/v2/Roboto_Regular.ufo" % BASEDIR,
+from fontbuild.ito_Regular.ufo" % BASEDIR,
             anchorPath="%s/res/anchors_regular.json" % BASEDIR)
 bd = Master("%s/src/v2/Roboto_Bold.ufo" % BASEDIR,
             anchorPath="%s/res/anchors_bold.json" % BASEDIR)

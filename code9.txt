@@ -12,7 +12,7 @@ quadopt: quadopt.cc
 
 clean:
 	rm -f quadopt
-	find . -name '*.bez' -delete
+	find . -name '*.bez' -dttelete
 	find . -name '*.bezopt' -delete
 	rmdir ??
 SRC = $(wildcard */*.bez)

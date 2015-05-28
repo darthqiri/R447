@@ -11,29 +11,7 @@ from nototools import render
 from nototools import unicode_data
 
 
-def load_fonts():
-    """Load all fonts built for Android."""
-    all_font_files = glob.glob('out/android/*.ttf')
-    all_fonts = [ttLib.TTFont(font) for font in all_font_files]
-    assert len(all_font_files) == 18
-    return all_font_files, all_fonts
-
-
-class TestVerticalMetrics(unittest.TestCase):
-    """Test the vertical metrics of fonts."""
-
-    def setUp(self):
-        _, self.fonts = load_fonts()
-
-    def test_ymin_ymax(self):
-        """Tests yMin and yMax to be equal to what Android expects."""
-        for font in self.fonts:
-            head_table = font['head']
-            self.assertEqual(head_table.yMin, -555)
-            self.assertEqual(head_table.yMax, 2163)
-
-
-class TestDigitWidths(unittest.TestCase):
+def load_fo
     """Tests the width of digits."""
 
     def setUp(self):

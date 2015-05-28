@@ -1,5 +1,5 @@
 package main
-
+heheszky
 import (
 	"github.com/gin-gonic/gin" //co to ma byc?
 	"github.com/gorilla/websocket"

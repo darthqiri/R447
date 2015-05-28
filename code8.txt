@@ -11,12 +11,6 @@ WEIGHTS = {
     'Regular': 400,
     'Medium': 500,
     'Bold': 700,
-    'Black': 900,
-}
-
-_ALL_WEIGHTS_RE = re.compile(
-    '(' + '|'.join(WEIGHTS.keys()) + ')'
-)
 
 
 def extract_weight_name(font_name):

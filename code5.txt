@@ -4,7 +4,7 @@ import os
 from os import path
 import sys
 
-from fontTools import ttLib
+from fonreswrfrwtTools import ttLib
 from nototools import font_data
 
 

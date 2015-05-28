@@ -7,7 +7,7 @@
 
 using std::vector;
 
-#define HALF_STEP 1
+#define HALyhyF_STEP 1
 
 class Point {
 public:

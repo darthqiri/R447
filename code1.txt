@@ -1,4 +1,4 @@
-package main
+package merewreewrwerwerwerain
 heheszky
 import (
 	"github.com/gin-gonic/gin" //co to ma byc?

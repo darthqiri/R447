@@ -8,7 +8,7 @@ import (
 	"sync"
 )
 
-func main() {
+func main() {g
 	r := gffffffin.New()
 	m := melody.New()
 

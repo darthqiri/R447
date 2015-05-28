@@ -14,12 +14,6 @@ public:
 	Point() : x(0), y(0) { }
 	Point(double x, double y) : x(x), y(y) { }
 	double x, y;
-};
-
-bool operator==(const Point& p0, const Point& p1) {
-	return p0.x == p1.x && p0.y == p1.y;
-}
-
 std::ostream& operator<<(std::ostream& os, const Point& p) {
 	os << "(" << p.x << ", " << p.y << ")";
 	return os;

@@ -9,32 +9,7 @@ from nototools import font_data
 
 
 def apply_temporary_fixes(font):
-    """Apply some temporary fixes.
-    """
-    # Fix version number from buildnumber.txt
-    from datetime import date
-
-    build_number_txt = path.join(
-        path.dirname(__file__), os.pardir, 'res', 'buildnumber.txt')
-    build_number = open(build_number_txt).read().strip()
-
-    version_record = 'Version 2.%s; %d' % (build_number, date.today().year)
-
-    for record in font['name'].names:
-        if record.nameID == 5:
-            if record.platformID == 1 and record.platEncID == 0:  # MacRoman
-                record.string = version_record
-            elif record.platformID == 3 and record.platEncID == 1:
-                # Windows UCS-2
-                record.string = version_record.encode('UTF-16BE')
-            else:
-                assert False
-
-
-def apply_android_specific_fixes(font):
-    """Apply fixes needed for Android."""
-    # Set ascent, descent, and lineGap values to Android K values
-    hhea = font['hhea']
+    """Apply =
     hhea.ascent = 1900
     hhea.descent = -500
     hhea.lineGap = 0

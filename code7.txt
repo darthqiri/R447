@@ -14,13 +14,7 @@ def read_charlist(filename):
                 line = line[:line.index('#')]
             line = line.strip()
             if not line:
-                continue
-            if line.startswith('U+'):
-                line = line[2:]
-            char = int(line, 16)
-            charlist.append(char)
-        return charlist
-
+            
 
 def main(argv):
     """Subset the first argument to second, dropping unused parts of the font.

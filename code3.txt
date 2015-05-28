@@ -1,0 +1,36 @@
+
+
+input_file=$1
+
+function render {
+ cat $input_file | $HARFBUZZ/util/hb-view --font-file=$1 --output-format=png --output-file=$2.png --font-size=200
+}
+
+render $FONTDIR/Roboto-Thin.ttf 100
+render $FONTDIR/Roboto-Light.ttf 300
+render $FONTDIR/Roboto-Regular.ttf 400
+render $FONTDIR/Roboto-Medium.ttf 500
+render $FONTDIR/Roboto-Bold.ttf 700
+render $FONTDIR/Roboto-Black.ttf 900
+
+render $FONTDIR/Roboto-ThinItalic.ttf i100
+render $FONTDIR/Roboto-LightItalic.ttf i300
+render $FONTDIR/Roboto-Italic.ttf i400
+render $FONTDIR/Roboto-MediumItalic.ttf i500
+render $FONTDIR/Roboto-BoldItalic.ttf i700
+render $FONTDIR/Roboto-BlackItalic.ttf i900
+
+render $FONTDIR/RobotoCondensed-Light.ttf c300
+render $FONTDIR/RobotoCondensed-Regular.ttf c400
+render $FONTDIR/RobotoCondensed-Bold.ttf c700
+
+render $FONTDIR/RobotoCondensed-LightItalic.ttf ci300
+render $FONTDIR/RobotoCondensed-Italic.ttf ci400
+render $FONTDIR/RobotoCondensed-BoldItalic.ttf ci700
+
+eog *.png
+
+    Status API Training Shop Blog About 
+
+    © 2015 GitHub, Inc. Terms Privacy Security Contact 
+
